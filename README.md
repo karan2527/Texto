@@ -1,16 +1,12 @@
-# texto
+Introducing to
+# Texto
 
-A new Flutter project.
+# Speech to Text App
 
-## Getting Started
+This Flutter application converts speech to text in real-time and provides a confidence rating using the `speech_to_text` package.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Features
+-  Real-time speech recognition
+-  Displays transcribed text
+-  Confidence rating for accuracy assessment
+-  Simple and intuitive UI
