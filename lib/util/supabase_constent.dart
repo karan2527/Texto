@@ -1,2 +1,0 @@
-const supabaseUrl = 'https://nunxksqgshqleuwmzvku.supabase.co';
-const supabaseKey = String.fromEnvironment('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im51bnhrc3Fnc2hxbGV1d216dmt1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzgzMTk1MDUsImV4cCI6MjA1Mzg5NTUwNX0.BavcCFhP4uC6SqLJn9b1WhQxebjBA_JLd0yj6tSULY4');
