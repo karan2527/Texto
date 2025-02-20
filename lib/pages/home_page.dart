@@ -55,17 +55,24 @@ class _HomepageState extends State<Homepage> {
       body: Center(
         child: Column(
           children: [
-            Padding(
+            Container(
               padding: const EdgeInsets.all(16),
-              child: Container(
-                child: Text(_speechToText.isListening ? "Listening..."
-                 : _speechEnabled ? "Tap the microphone to start listening.."
-                 : "Speech not enabled",
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.black,
-                ),),
+              child: Text(_speechToText.isListening ? "Listening..."
+               : _speechEnabled ? "Tap the microphone to start listening.."
+               : "Speech not enabled",
+              style: const TextStyle(
+                fontSize: 20,
+                color: Colors.black,
               ),
+            ),
+            ),
+            Expanded(child: Container(child: Text(_wordsSpoken),)),
+            if (_speechToText.isNotListening && _confidenceLevel > 0) 
+            Text(
+                "confidence : ${(_confidenceLevel* 100).toStringAsFixed(1)}%",
+                style: const TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold)
             )
           ],
         ),
@@ -73,7 +80,7 @@ class _HomepageState extends State<Homepage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _speechToText.isListening ? _stoptListening : _startListening,
         tooltip: 'listen',
-        child: Icon(_speechToText.isListening ? Icons.mic_off : Icons.mic,
+        child: Icon(_speechToText.isNotListening ? Icons.mic_off : Icons.mic,
         color: Colors.white,
         ),
         backgroundColor: Colors.red,
