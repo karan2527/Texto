@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Texto',
       theme: ThemeData(
        
-        colorScheme: ColorScheme.light(
+        colorScheme: const ColorScheme.light(
           primary: Colors.black
         ),
         

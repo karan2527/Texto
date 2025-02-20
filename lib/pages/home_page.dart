@@ -14,7 +14,7 @@ class _HomepageState extends State<Homepage> {
   bool _speechEnabled = false;
   String _wordsSpoken = "";
   double _confidenceLevel = 0;
-  void initState() {
+  void  initState() {
     super.initState();
     initSpeech();
   }
@@ -47,7 +47,7 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text('Speech demo',
+        title: const Text('Speech demo',
         style: TextStyle(
           color: Colors.white,
         ),),
@@ -66,13 +66,25 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
             ),
-            Expanded(child: Container(child: Text(_wordsSpoken),)),
-            if (_speechToText.isNotListening && _confidenceLevel > 0) 
-            Text(
-                "confidence : ${(_confidenceLevel* 100).toStringAsFixed(1)}%",
+            Expanded(
+              
+              child: Container(
+                padding: const EdgeInsets.all(16),
+                child: Text(_wordsSpoken,
                 style: const TextStyle(
                   fontSize: 30,
-                  fontWeight: FontWeight.bold)
+                  fontWeight: FontWeight.bold,
+                ),),
+            ),),
+            if (_speechToText.isNotListening && _confidenceLevel > 0) 
+            Padding(
+              padding: const EdgeInsets.only(bottom:100),
+              child: Text(
+                  "confidence : ${(_confidenceLevel* 100).toStringAsFixed(1)}%",
+                  style: const TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold)
+              ),
             )
           ],
         ),
@@ -80,7 +92,7 @@ class _HomepageState extends State<Homepage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _speechToText.isListening ? _stoptListening : _startListening,
         tooltip: 'listen',
-        child: Icon(_speechToText.isNotListening ? Icons.mic_off : Icons.mic,
+        child:  Icon(_speechToText.isNotListening ? Icons.mic_off : Icons.mic,
         color: Colors.white,
         ),
         backgroundColor: Colors.red,
