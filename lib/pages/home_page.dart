@@ -74,7 +74,9 @@ class _HomepageState extends State<Homepage> {
         onPressed: _speechToText.isListening ? _stoptListening : _startListening,
         tooltip: 'listen',
         child: Icon(_speechToText.isListening ? Icons.mic_off : Icons.mic,
-        color: Colors.white,),
+        color: Colors.white,
+        ),
+        backgroundColor: Colors.red,
         ),
     );
   }
