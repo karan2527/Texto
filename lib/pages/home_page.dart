@@ -95,7 +95,7 @@ class _HomepageState extends State<Homepage> {
         child:  Icon(_speechToText.isNotListening ? Icons.mic_off : Icons.mic,
         color: Colors.white,
         ),
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.green,
         ),
     );
   }
